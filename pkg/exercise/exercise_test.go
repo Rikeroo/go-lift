@@ -12,7 +12,7 @@ func TestAddSet(t *testing.T) {
 	reps := 8
 	exercise.AddSet(weight, reps)
 
-	// 
+	//
 	//want :=
-	got := 
+	// got :=
 }
