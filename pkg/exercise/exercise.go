@@ -9,5 +9,7 @@ type Exercise struct {
 }
 
 func (e *Exercise) AddSet(weight float32, reps int) {
-	// return [3]float32{0, 0, 0}
+	newSetNum := len(e.Sets) + 1
+	newSet := set.Set{SetNumber: newSetNum, Weight: weight, Reps: reps}
+	e.Sets = append(e.Sets, newSet)
 }
