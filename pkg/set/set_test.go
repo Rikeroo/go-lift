@@ -34,8 +34,7 @@ func TestGet(t *testing.T) {
 
 	want := [3]float32{float32(1), 10.5, float32(8)}
 
-	setNum := 1
-	got := set.Get(setNum)
+	got := set.Get()
 
 	if got != want {
 		t.Errorf("got %v want %v", got, want)

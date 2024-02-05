@@ -15,6 +15,8 @@ func (s *Set) Update(selector string, value float32) {
 	}
 }
 
-func (s Set) Get(setNum int) [3]float32 {
+func (s Set) Get() [3]float32 {
+	// Returns float32 array: [setNumber, weight, reps]
+	// which are attributes of set
 	return [3]float32{float32(s.SetNumber), s.Weight, float32(s.Reps)}
 }

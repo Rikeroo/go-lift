@@ -1,6 +1,6 @@
 # Go-lift
 <p align="center">
-    <img src="/assets/Go-lift_character.png" width="100">
+    <img src="/assets/Go-lift_character.png" width="200">
 </p>
 
 ## About
