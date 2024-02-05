@@ -1,3 +1,3 @@
 # Go-lift
-![Go-lift Logo](/assets/Go-lift_character.png | width=100)
+<img src="/assets/Go-lift_character" width="100">
 Light-weight Workout tracking web-app, providing statistics to inform your training. Written with Go and HTMX
