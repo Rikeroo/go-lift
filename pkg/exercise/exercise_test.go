@@ -69,10 +69,10 @@ func assertError(t testing.TB, got, want error) {
 	}
 }
 
-func makeExercise(t testing.TB, setNums int) Exercise {
+func makeExercise(t testing.TB, numSets int) Exercise {
 	sets := []set.Set{}
 
-	for i := 0; i < setNums; i++ {
+	for i := 0; i < numSets; i++ {
 		testSet := set.Set{SetNumber: i + 1, Weight: 10.0, Reps: 8}
 		sets = append(sets, testSet)
 	}
