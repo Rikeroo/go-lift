@@ -5,15 +5,24 @@ import (
 	"time"
 )
 
+type ExercisesDict map[string]exercise.Exercise
+
 type Workout struct {
 	Date      time.Time
-	Exercises []exercise.Exercise
+	Exercises ExercisesDict
 }
 
 func (w *Workout) AddExercise(name string) {
 	// Creates new Exercise within a workout with
 	// empty Sets slice
+
+	// If workout doesn't have Exercise dictionary initialised,
+	// then initialise one
+	if w.Exercises == nil {
+		w.Exercises = make(ExercisesDict)
+	}
+
 	exercise := exercise.Exercise{Name: name}
-	w.Exercises = append(w.Exercises, exercise)
+	w.Exercises[name] = exercise
 
 }

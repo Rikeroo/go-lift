@@ -10,21 +10,23 @@ import (
 func TestAddExercise(t *testing.T) {
 	workout := Workout{Date: time.Now()}
 
-	workout.AddExercise("Test Exercise")
-	compareExercise := exercise.Exercise{Name: "Test Exercise"}
+	exerciseName := "Test Exercise"
+	workout.AddExercise(exerciseName)
+	compareExercise := exercise.Exercise{Name: exerciseName}
 
 	want := compareExercise
 
-	got := exercise.Exercise{}
+	got, ok := workout.Exercises[exerciseName]
 
-	if len(workout.Exercises) > 0 {
-		got = workout.Exercises[0]
+	if !ok {
+		t.Errorf("No exercise with key: %v", exerciseName)
 	}
 
-	if !reflect.DeepEqual(want, got) {
-		t.Errorf("Got %v wanted %v", got, want)
+	if ok {
+		if !reflect.DeepEqual(got, want) {
+			t.Errorf("Got %v want %v", got, want)
+		}
 	}
-
 }
 
 // func makeWorkout(t testing.TB, numWorkouts int) {
