@@ -7,8 +7,8 @@ import (
 
 func TestAddSet(t *testing.T) {
 	t.Run("Add set to empty set slice", func(t *testing.T) {
-		var sets []set.Set
-		exercise := Exercise{Name: "Exercise test-name", Sets: sets}
+		// var sets []set.Set
+		exercise := Exercise{Name: "Exercise test-name"}
 		var weight float32 = 10.0
 		reps := 8
 		exercise.AddSet(weight, reps)

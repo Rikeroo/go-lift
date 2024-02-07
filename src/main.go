@@ -7,10 +7,15 @@ import (
 
 func main() {
 	// Typical user journey
+
+	// Initiate new workout at current date
 	w1 := workout.Workout{Date: time.Now()}
 
-	w1.AddExercise("Incline DB Press")
+	// Add new workout with name
+	exerciseName := "Incline DB Press"
+	w1.AddExercise(exerciseName)
 
-	// w1.Exercises[]
+	// Add set to exercise
+	(w1.Exercises[exerciseName]).AddSet(10, 8)
 
 }

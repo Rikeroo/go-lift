@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-type ExercisesDict map[string]exercise.Exercise
+type ExercisesDict map[string]*exercise.Exercise
 
 type Workout struct {
 	Date      time.Time
@@ -23,6 +23,11 @@ func (w *Workout) AddExercise(name string) {
 	}
 
 	exercise := exercise.Exercise{Name: name}
-	w.Exercises[name] = exercise
+	w.Exercises[name] = &exercise
+
+}
+
+func (w *Workout) AddSet(name string, weight float32, reps int) {
+	w.Exercises[name].AddSet(weight, reps)
 
 }
