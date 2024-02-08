@@ -37,7 +37,7 @@ func main() {
 	// e1 := w1.Exercises[exerciseName]
 
 	h1 := func(w http.ResponseWriter, r *http.Request) {
-		tmpl := template.Must(template.ParseFiles("index.html"))
+		tmpl := template.Must(template.ParseFiles("./templates/index.html"))
 		tmpl.Execute(w, w1)
 	}
 	http.HandleFunc("/", h1)
