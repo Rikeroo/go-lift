@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Workout: </h1>
+    <p>{{ .Date }}</p>
+    <h2>Exercises</h2>
+    {{ range .Exercises }}
+        <h3>{{ .Name }} : </h3>
+        {{ range .Sets }}
+            <p>Set: {{ .SetNumber }} - Weight: {{ .Weight }} - Reps: {{ .Reps }}</p>
+        {{ end }}
+    {{ end }}
+</body>
+</html>
