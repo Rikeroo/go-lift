@@ -16,11 +16,29 @@
             <p>Set: {{ .SetNumber }} - Weight: {{ .Weight }} - Reps: {{ .Reps }}</p>
         {{ end }}
     {{ end }}
-   
-    <div>
-        <section class="m-12 flex h-screen items-center">
-            <p> Test </p>
-        </section>
+
+    <div class="grid gap-2 grid-flow-row auto-rows m-5 p-2 bg-zinc-300 rounded-lg ">
+        <div class="bg-zinc-200 rounded-lg px-3 py-1 text-center justify-self-center">
+            <span class="font-semibold">Incline DB Press</span>
+        </div>
+        <div class="bg-zinc-400 rounded-lg px-2">
+            <span class="justify-center ">
+                <div class="grid grid-cols-3 gap-1 text-white font-medium">
+                   <div class="text-center">Set:</div>
+                   <div class="text-center">Weight:</div> 
+                   <div class="text-center">Reps:</div>
+                </div>
+            </span>
+        </div>
+            <div class="bg-zinc-200 rounded-lg px-2">
+            <span class="justify-center ">
+                <div class="grid grid-cols-3 gap-1 ">
+                   <div class="text-center">1</div>
+                   <div class="text-center">20 kg</div> 
+                   <div class="text-center">10</div>
+                </div>
+            </span>
+        </div>
     </div>
 </body>
 </html>

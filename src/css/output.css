@@ -544,97 +544,105 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.container {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-
 .m-12 {
   margin: 3rem;
+}
+
+.m-5 {
+  margin: 1.25rem;
 }
 
 .flex {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .h-screen {
   height: 100vh;
+}
+
+.grid-flow-row {
+  grid-auto-flow: row;
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .items-center {
   align-items: center;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.justify-center {
+  justify-content: center;
 }
 
-@media (min-width: 768px) {
-  .md\:container {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-  }
+.gap-1 {
+  gap: 0.25rem;
+}
 
-  @media (min-width: 640px) {
-    .md\:container {
-      max-width: 640px;
-    }
-  }
+.gap-2 {
+  gap: 0.5rem;
+}
 
-  @media (min-width: 768px) {
-    .md\:container {
-      max-width: 768px;
-    }
-  }
+.justify-self-center {
+  justify-self: center;
+}
 
-  @media (min-width: 1024px) {
-    .md\:container {
-      max-width: 1024px;
-    }
-  }
+.rounded-lg {
+  border-radius: 0.5rem;
+}
 
-  @media (min-width: 1280px) {
-    .md\:container {
-      max-width: 1280px;
-    }
-  }
+.bg-zinc-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(228 228 231 / var(--tw-bg-opacity));
+}
 
-  @media (min-width: 1536px) {
-    .md\:container {
-      max-width: 1536px;
-    }
-  }
+.bg-zinc-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(212 212 216 / var(--tw-bg-opacity));
+}
+
+.bg-zinc-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(161 161 170 / var(--tw-bg-opacity));
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
