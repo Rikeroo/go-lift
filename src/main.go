@@ -58,6 +58,9 @@ func main() {
 		http.ServeFile(w, r, "./css/output.css")
 	})
 
+	router := http.NewServeMux()
+	
+
 	http.HandleFunc("/workouts", workoutsHandler)
 
 	log.Fatal(http.ListenAndServe(":8000", nil))
