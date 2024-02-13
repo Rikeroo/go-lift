@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"go-lift/pkg/workout"
 	"log"
 	"net/http"
@@ -61,6 +60,5 @@ func main() {
 
 	http.HandleFunc("/workouts", workoutsHandler)
 
-	fmt.Println("Starting Server...")
 	log.Fatal(http.ListenAndServe(":8000", nil))
 }
